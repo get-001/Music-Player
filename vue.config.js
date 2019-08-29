@@ -8,7 +8,7 @@ module.exports = {
   productionSourceMap: false,
 
   // outputDir -- 设置输出目录、
-  outputDir: "./myDist",
+  outputDir: "./dist",
 
   // publicPath -- 设置资源目录 (开发环境'/'、生产环境'./')
   publicPath: process.env.NODE_ENV === "production" ? "./" : "/",
