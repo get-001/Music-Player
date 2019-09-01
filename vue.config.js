@@ -4,28 +4,31 @@ const webpack = require("webpack");
 const path = require("path");
 
 module.exports = {
-  // productionSourceMap -- 是否打包map文件(映射文件)
+  // productionSourceMap -- 是否打包map文件(映射文件，作用是调试时会显示错误在第几行。上线后用不着)
   productionSourceMap: false,
 
-  // outputDir -- 设置输出目录默认(dist)、
+  // outputDir -- 设置输出目录 默认(dist)、
   outputDir: "./myDist",
 
   // publicPath -- 设置资源目录 (开发环境'/'、生产环境'./')
+  // process.env.NODE_ENV 可以判断是否为生产环境
   publicPath: process.env.NODE_ENV === "production" ? "./" : "/",
 
-  // assetsDir -- 配置资源存放的位置 (js/css)
+  // assetsDir -- 配置资源存放的位置(js、css、img)
   assetsDir: "src",
 
   // chainWebpack -- 给路径配置别名
   chainWebpack: config => {
-    config.resolve.alias.set("_v", path.resolve(__dirname, "src/views"));
+    config.resolve.alias.set("@v", path.resolve(__dirname, "src/views"));
   },
+
+  // ------------------------------------------------------------------------------------------
 
   // devServer -- 设置axios代理(axios插件)
   devServer: {
     // 设置接口
     proxy: {
-      // 这样配置可以跨域
+      // 这样配置就可以在开发环境下跨域了
       "/Music-Player/api.php": {
         target: "http://a-1.vip", //目标接口域名
         changeOrigin: true, //是否跨域
