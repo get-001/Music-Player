@@ -43,12 +43,10 @@ export default {
 @keyframes identifier {
   0% {
     opacity: 0;
-    // transform: translate(0, -100v);
     filter: blur(5px);
   }
   100% {
     opacity: 1;
-    // transform: translate(0, 0);
     filter: blur(0);
   }
 }
@@ -57,8 +55,8 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   padding: 45px 10px 0 10px;
   overflow: hidden;
   cursor: default;
@@ -73,6 +71,12 @@ export default {
       padding: 0 5px;
       overflow-y: scroll;
       max-height: calc(100vh - 35px - 110px);
+    }
+    /* ········· ········· 设置滚动条的样式 ········· ········· */
+    .panel-body::-webkit-scrollbar {
+      /* 滚动条整体样式 */
+      width: 0;
+      height: 0;
     }
   }
 }

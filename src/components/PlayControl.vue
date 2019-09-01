@@ -32,19 +32,19 @@ export default {
     progressBar(event) {
       let currentTarget = event.currentTarget,
         width = currentTarget.offsetWidth,
-        left = currentTarget.offsetLeft,
+        left = $(currentTarget).offset().left,
         offsetX =
           event.offsetX < 0 ? 0 : event.offsetX > width ? width : event.offsetX,
         progress = offsetX / width;
-      document.body.onmousemove = e => {
-        offsetX = e.clientX - left;
+      document.onmousemove = e => {
+        offsetX = e.pageX - left;
         offsetX = offsetX < 0 ? 0 : offsetX > width ? width : offsetX;
         progress = offsetX / width;
         this.musicProgress = String(progress * 100);
       };
-      document.body.onmouseup = () => {
-        document.body.onmousemove = null;
-        document.body.onmouseup = null;
+      document.onmouseup = () => {
+        document.onmousemove = null;
+        document.onmouseup = null;
         let total = musicPlayer.duration || 0,
           newTime = musicPlayer.currentTime || 0;
         musicPlayer.currentTime = progress * total;
@@ -60,7 +60,7 @@ export default {
 #PlayControl {
   // background: rgba(100, 128, 170, 0.39);
   //   background: rgba(0, 0, 0, 0.1);
-  width: 100vw;
+  width: 100%;
   height: 60px;
   font-size: 0;
   display: flex;

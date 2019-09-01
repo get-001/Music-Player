@@ -1,6 +1,6 @@
 <template>
   <div id="NowPlaying">
-    <div class="song-list">
+    <div class="list-scroll">
       <table class="table" style="margin:0;">
         <thead>
           <tr>
@@ -169,10 +169,10 @@ export default {
     opacity: 0;
   }
   .list-leave-to {
-    transform: translateX(-100vw);
+    transform: translateX(-100%);
   }
 
-  .song-list {
+  .list-scroll {
     width: 100%;
     height: 100%;
     overflow-y: scroll;
@@ -242,23 +242,6 @@ export default {
     .but-dlelist > span:hover {
       cursor: pointer;
     }
-  }
-  /* ········· ········· 设置滚动条的样式 ········· ········· */
-  .song-list::-webkit-scrollbar {
-    /* 滚动条整体样式 */
-    width: 4px;
-    height: 0;
-  }
-
-  .song-list::-webkit-scrollbar-thumb {
-    /* 滚动条里面小方块 */
-    border-radius: 4px;
-    background: rgba(255, 255, 255, 0.2);
-  }
-
-  .song-list::-webkit-scrollbar-thumb:hover {
-    /* 滚动条里面小方块 鼠标悬浮样式 */
-    background: rgba(255, 255, 255, 0.4);
   }
 }
 </style>

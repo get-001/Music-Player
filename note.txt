@@ -1,0 +1,39 @@
+- http://a-1.vip/Music-Player/api.php
+- netease -- 网易云
+- 获取歌曲列表：types=search & count=20 & source=netease & pages=1 & name=关键字
+- 获取详细-音乐文件：types=url & id=[url_id] & source=netease
+- 获取详细-图片封面：types=pic & id=[pic_id] & source=netease
+- 获取详细-歌词文本：types=lyric & id=[lyric_id] & source=netease
+
+
+UID
+types=userlist & uid=445746067
+
+获取UID列表
+types=playlist & id=642774691
+
+        Array.prototype.some() -- 与Array.prototype.every()相反
+        // 对一组数据(数组)进行判断，返回true/false
+        // 所有成员都满足条件才会返回false，只要有一个成员返回true，就返回true 并终止数组的遍历。
+
+        
+        event.clientX 设置或获取鼠标指针位置相对于当前窗口的 x 坐标，其中客户区域不包括窗口自身的控件和滚动条。 (可见区域)
+        event.clientY 设置或获取鼠标指针位置相对于当前窗口的 y 坐标，其中客户区域不包括窗口自身的控件和滚动条。 （可见区域）
+        event.offsetX 设置或获取鼠标指针位置相对于触发事件的对象的 x 坐标。 （触发事件的元素,ie,chrome支持此属性，ff不支持）
+        event.offsetY 设置或获取鼠标指针位置相对于触发事件的对象的 y 坐标。 （触发事件的元素,ie,chrome支持此属性，ff不支持）
+        event.screenX 设置或获取获取鼠标指针位置相对于用户屏幕的 x 坐标。(用户屏幕左上角) 
+        event.screenY 设置或获取鼠标指针位置相对于用户屏幕的 y 坐标。 (用户屏幕左上角) 
+        event.x 设置或获取鼠标指针位置相对于父文档的 x 像素坐标(亦即相对于当前窗口)。(ff不支持)
+        event.y 设置或获取鼠标指针位置相对于父文档的 y 像素坐标(亦即相对于当前窗口)。(ff不支持)
+
+        event.layerX 鼠标相比较于当前坐标系的位置,即如果触发元素没有设置绝对定位或相对定位,
+
+                        以页面为参考点,如果有,将改变参考坐标系,从触发元素盒子模型的border区域的左上角为参考点(未理解)
+
+        event.laylerY 鼠标相比较于当前坐标系的位置,即如果触发元素没有设置绝对定位或相对定位,
+
+                        以页面为参考点,如果有,将改变参考坐标系,从触发元素盒子模型的border区域的左上角为参考点(未理解)
+
+        event.pageX 设置或获取鼠标指针位置相对于当前窗口的 x 坐标，其中客户区域包括窗口自身的控件和滚动条。
+
+        event.pageY 设置或获取鼠标指针位置相对于当前窗口的 y 坐标，其中客户区域包括窗口自身的控件和滚动条。

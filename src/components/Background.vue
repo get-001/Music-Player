@@ -19,9 +19,11 @@ export default {
 <style lang="less">
 #Background {
   z-index: -100;
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: linear-gradient(200deg, #7f7280, #000000);
 }
 #Background > .image {

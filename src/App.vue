@@ -1,6 +1,7 @@
 <template>
   <div
     id="App"
+    class="container"
     :test="message(player.__test_message)"
     v-swipeleft="swipeleft"
     v-swiperight="swiperight"
@@ -33,6 +34,8 @@
         <p class="center">Hello World ~</p>
         <p class="center">欢迎你来体验 Music-Player</p>
         <h5 style="padding-left:20px;">本次更新：</h5>
+        <p>[优化] 优化pc端样式</p>
+        <h5 style="padding-left:20px;">v1.1.4.20190826</h5>
         <p>[优化] 增强过度效果</p>
         <p>[修复] 已知bug</p>
         <h5 style="padding-left:20px;">v1.1.3.20190824</h5>
@@ -208,11 +211,11 @@ body .message {
 }
 
 #App {
-  width: 100vw;
   height: 100vh;
   overflow: hidden;
   position: relative;
   color: #c5c5c5;
+  padding: 0;
 
   #HelloWorldAlert {
     padding: 10px 0;
@@ -250,8 +253,8 @@ body .message {
   }
 
   .wraper {
-    width: 100vw;
-    height: calc(100vh - 35px - 60px);
+    width: 100%;
+    height: calc(100vh - 38px - 60px);
   }
 }
 </style>

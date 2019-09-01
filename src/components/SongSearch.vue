@@ -15,7 +15,7 @@
           ></span>
         </div>
       </div>
-      <div v-if="songlist.length!==0" class="wrap-scroll">
+      <div v-if="songlist.length!==0" class="list-scroll">
         <table class="table table-condensed table-striped" style="margin-bottom:0;">
           <thead>
             <tr class="active">
@@ -147,7 +147,7 @@ export default {
     }
   }
 
-  .wrap-scroll {
+  .list-scroll {
     margin-top: 10px;
     overflow-y: scroll;
     max-height: calc(100vh - 35px - 180px);

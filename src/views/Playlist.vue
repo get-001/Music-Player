@@ -262,22 +262,5 @@ export default {
       }
     }
   }
-  /* ········· ········· 设置滚动条的样式 ········· ········· */
-  .list-scroll::-webkit-scrollbar {
-    /* 滚动条整体样式 */
-    width: 4px;
-    height: 0;
-  }
-
-  .list-scroll::-webkit-scrollbar-thumb {
-    /* 滚动条里面小方块 */
-    border-radius: 4px;
-    background: rgba(255, 255, 255, 0.2);
-  }
-
-  .list-scroll::-webkit-scrollbar-thumb:hover {
-    /* 滚动条里面小方块 鼠标悬浮样式 */
-    background: rgba(255, 255, 255, 0.4);
-  }
 }
 </style>

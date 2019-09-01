@@ -7,7 +7,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     player: {
-      versions: "v1.1.4.20190826",
+      versions: "v1.1.5.20190902",
       __test_message: "",
       // 播放状态
       play: false,

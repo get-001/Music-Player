@@ -15,7 +15,7 @@
           ></span>
         </div>
       </div>
-      <div v-if="uidList.length!==0" class="wrap-scroll" style="margin-top:10px;">
+      <div v-if="uidList.length!==0" class="list-scroll" style="margin-top:10px;">
         <ul>
           <li v-for="(item,index) in uidList" :key="index">
             <img :src="item.coverImgUrl+'?param=50y50'" />
@@ -114,7 +114,7 @@ export default {
       cursor: not-allowed;
     }
   }
-  .wrap-scroll {
+  .list-scroll {
     margin-top: 10px;
     overflow-y: scroll;
     max-height: calc(100vh - 35px - 180px);
@@ -161,22 +161,5 @@ export default {
       padding-bottom: 0;
     }
   }
-  // /* ········· ········· 设置滚动条的样式 ········· ········· */
-  // .wrap-scroll::-webkit-scrollbar {
-  //   /* 滚动条整体样式 */
-  //   width: 4px;
-  //   height: 0;
-  // }
-
-  // .wrap-scroll::-webkit-scrollbar-thumb {
-  //   /* 滚动条里面小方块 */
-  //   border-radius: 4px;
-  //   background: rgba(200, 200, 200, 0.2);
-  // }
-
-  // .wrap-scroll::-webkit-scrollbar-thumb:hover {
-  //   /* 滚动条里面小方块 鼠标悬浮样式 */
-  //   background: rgba(200, 200, 200, 0.4);
-  // }
 }
 </style>
