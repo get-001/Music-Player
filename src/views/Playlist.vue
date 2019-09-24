@@ -80,7 +80,7 @@ export default {
     ...mapState(["player"])
   },
   methods: {
-    ...mapMutations(["dleSonglist", "addSonglistItem"]),
+    ...mapMutations(["delSonglist", "addSonglistItem"]),
     resetAllData(result) {
       if (!result.execute) return;
       // 重置所有数据
@@ -97,14 +97,14 @@ export default {
     },
     removeSonglist(result) {
       if (!result.execute) return;
-      this.dleSonglist({ key: result.data, isUpCache: true });
+      this.delSonglist({ key: result.data, isUpCache: true });
     },
     isRemove(key) {
       const templateArr = ["recently", "collect"];
       return templateArr.lastIndexOf(key) === -1;
     },
     skipSonglist(id) {
-      this.$router.push({
+      this.$router.replace({
         name: "nowPlaying",
         params: { id }
       });

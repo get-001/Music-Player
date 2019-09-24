@@ -7,7 +7,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     player: {
-      versions: "v1.1.5.20190902",
+      versions: "v1.1.5.20190924",
       __test_message: "",
       // 播放状态
       play: false,
@@ -181,11 +181,11 @@ export default new Vuex.Store({
           // 有错误，该歌曲无法播放
           state.player.__test_message = "有错误，该歌曲无法播放";
           // 移除无法播放的歌曲、
-          this._mutations.dleSonglistItem[0]({
+          this._mutations.delSonglistItem[0]({
             listType,
             id: data.id
           });
-          this._mutations.dleSonglistItem[0]({
+          this._mutations.delSonglistItem[0]({
             listType,
             id: data.id
           });
@@ -214,7 +214,7 @@ export default new Vuex.Store({
       if (isUpCache) api.addCache(key, playlist);
     },
     // 删除播放列表、(vuex、缓存)   isUpCache == true 表示需要更新缓存
-    dleSonglist(state, { key, isUpCache }) {
+    delSonglist(state, { key, isUpCache }) {
       // 容错处理
       // 防止报错，将当前查看的列表切换到'最近播放'的列表。
       if (state.player.currentSonglistType === key)
@@ -225,7 +225,7 @@ export default new Vuex.Store({
         state.player.playSong.index = 0;
       }
       Vue.delete(state.player.songlistAll, key);
-      if (isUpCache) api.dleCache(key);
+      if (isUpCache) api.delCache(key);
     },
     // 从缓存中读取所有的列表，并添加到歌曲列表中、
     addSonglistAll(state) {
@@ -260,7 +260,7 @@ export default new Vuex.Store({
       songlist.list = songlist.list.splice(0, 1000);
       api.addCache(listType, songlist);
     },
-    dleSonglistItem(state, { listType, id }) {
+    delSonglistItem(state, { listType, id }) {
       const songlistAll = state.player.songlistAll[listType];
       songlistAll.list.forEach((ele, index) => {
         if (ele.id === id) {
@@ -291,7 +291,7 @@ export default new Vuex.Store({
             const listType = "collect";
             if (cancel) {
               // 收藏列表已有--删除它
-              this._mutations.dleSonglistItem[0]({
+              this._mutations.delSonglistItem[0]({
                 listType,
                 id: upItem.id
               });

@@ -35,7 +35,7 @@
               <span
                 v-if="songs['target'].source==='NowPlaying'&&isActive(songs['target'].listType,songs.id)"
                 class="fa fa-trash-o"
-                @click="dleSonglist(songs)"
+                @click="delSonglist(songs)"
               ></span>
             </td>
           </tr>
@@ -128,7 +128,7 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(["addSonglistItem", "dleSonglistItem"]),
+    ...mapMutations(["addSonglistItem", "delSonglistItem"]),
     isActive(listType, id) {
       const list = this.player.songlistAll[listType].list;
       return list.some(ele => ele.id === id);
@@ -138,14 +138,14 @@ export default {
       // songs.target.item 为没有加工之前的数据，适合添加到列表、
       const item = songs.target.item;
       if (this.isActive("collect", item.id)) {
-        this.dleSonglistItem({ listType, id: item.id });
+        this.delSonglistItem({ listType, id: item.id });
       } else {
         this.addSonglistItem({ listType, item, up: true });
       }
     },
-    dleSonglist(songs) {
+    delSonglist(songs) {
       const listType = songs.target.listType;
-      this.dleSonglistItem({ listType, id: songs.id });
+      this.delSonglistItem({ listType, id: songs.id });
       this.closePopup();
       this.$message({
         message: "已移除：" + songs.singer + " - " + songs.name,

@@ -77,7 +77,7 @@ const getCacheIndex = () => {
     localStorage["list"] = JSON.stringify(list);
     localStorage[key] = JSON.stringify(data);
   },
-  dleCache = key => {
+  delCache = key => {
     let list = getCacheIndex();
     list.forEach((ele, index) => {
       if (ele === key) list.splice(index, 1);
@@ -137,7 +137,7 @@ const myBrowser = () => {
 export {
   get,
   addCache,
-  dleCache,
+  delCache,
   getCache,
   getCacheIndex,
   ajaxSong,

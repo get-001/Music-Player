@@ -1,0 +1,147 @@
+卷 系统 的文件夹 PATH 列表
+卷序列号为 0000000E 7464:B46A
+C:.
+│  .browserslistrc
+│  .eslintrc.js
+│  .gitignore
+│  babel.config.js
+│  note.txt		-- 笔记
+│  package-lock.json
+│  package.json	-- 依赖
+│  postcss.config.js
+│  README.md
+│  vue.config.js	-- vue环境配置文件
+│  
+├─myDist		-- 打包上线
+│  │  favicon.ico
+│  │  index.html
+│  │  myDist.zip	-- 已压缩的
+│  │  
+│  └─src
+│      ├─css
+│      │      app.fcef451f.css
+│      │      chunk-603b5f7d.ac6e55ed.css
+│      │      chunk-c12f59e6.2a2ed4d9.css
+│      │      chunk-e7f67ccc.e3786d1b.css
+│      │      chunk-vendors.2e967ee2.css
+│      │      
+│      ├─fonts
+│      │      element-icons.535877f5.woff
+│      │      element-icons.732389de.ttf
+│      │      fontawesome-webfont.674f50d2.eot
+│      │      fontawesome-webfont.af7ae505.woff2
+│      │      fontawesome-webfont.b06871f2.ttf
+│      │      fontawesome-webfont.fee66e71.woff
+│      │      glyphicons-halflings-regular.448c34a5.woff2
+│      │      glyphicons-halflings-regular.e18bbf61.ttf
+│      │      glyphicons-halflings-regular.f4769f9b.eot
+│      │      glyphicons-halflings-regular.fa277232.woff
+│      │      
+│      ├─img
+│      │      fontawesome-webfont.912ec66d.svg
+│      │      glyphicons-halflings-regular.89889688.svg
+│      │      
+│      └─js
+│              app.0e5bd93f.js
+│              chunk-603b5f7d.f33a7087.js
+│              chunk-c12f59e6.3feed496.js
+│              chunk-e7f67ccc.0634dd3e.js
+│              chunk-vendors.e9aa9f17.js
+│              
+├─public
+│      favicon.ico	-- logo
+│      index.html
+│      
+└─src
+    │  App.vue
+    │  main.js		-- 主入口
+    │  router.js
+    │  store.js
+    │  
+    ├─assets
+    │  │  logo.png
+    │  │  
+    │  ├─css
+    │  │  └─font-awesome-4.7.0
+    │  │      │  HELP-US-OUT.txt
+    │  │      │  
+    │  │      ├─css
+    │  │      │      font-awesome.css
+    │  │      │      font-awesome.min.css
+    │  │      │      
+    │  │      ├─fonts
+    │  │      │      fontawesome-webfont.eot
+    │  │      │      fontawesome-webfont.svg
+    │  │      │      fontawesome-webfont.ttf
+    │  │      │      fontawesome-webfont.woff
+    │  │      │      fontawesome-webfont.woff2
+    │  │      │      FontAwesome.otf
+    │  │      │      
+    │  │      ├─less
+    │  │      │      animated.less
+    │  │      │      bordered-pulled.less
+    │  │      │      core.less
+    │  │      │      fixed-width.less
+    │  │      │      font-awesome.less
+    │  │      │      icons.less
+    │  │      │      larger.less
+    │  │      │      list.less
+    │  │      │      mixins.less
+    │  │      │      path.less
+    │  │      │      rotated-flipped.less
+    │  │      │      screen-reader.less
+    │  │      │      stacked.less
+    │  │      │      variables.less
+    │  │      │      
+    │  │      └─scss
+    │  │              font-awesome.scss
+    │  │              _animated.scss
+    │  │              _bordered-pulled.scss
+    │  │              _core.scss
+    │  │              _fixed-width.scss
+    │  │              _icons.scss
+    │  │              _larger.scss
+    │  │              _list.scss
+    │  │              _mixins.scss
+    │  │              _path.scss
+    │  │              _rotated-flipped.scss
+    │  │              _screen-reader.scss
+    │  │              _stacked.scss
+    │  │              _variables.scss
+    │  │              
+    │  └─images
+    │          album_cover_player.png
+    │          collect.png
+    │          history.png
+    │          icon_list_menu.png
+    │          player.png
+    │          player_cover.png
+    │          wave.gif
+    │          
+    ├─components
+    │  │  api.js		-- 已封装的模块，主要操作缓存以及axios的数据请求、
+    │  │  Background.vue	-- 背景组件
+    │  │  PlayControl.vue	-- 音乐播放控制部分(如：进度条)
+    │  │  selectSonglist.vue	-- 一个选择歌单的弹出窗
+    │  │  SongDetailed.vue	-- 音乐详细，弹窗
+    │  │  SongSearch.vue	-- 音乐搜索，弹窗
+    │  │  SyncSonglist.vue	-- 同步音乐，弹窗
+    │  │  
+    │  └─Popup		-- 已封装的组件，弹出框
+    │      │  PopupWrap.vue
+    │      │  
+    │      └─Prompt
+    │              Alert.vue	-- 弹出框，alert
+    │              
+    ├─plugins
+    │      addEvent.js		-- 模块，增加移动端滑动、长按等事件
+    │      axios.js		-- 模块，axios 数据请求
+    │      element.js		-- element-ui按需导入配置
+    │      index.less		-- css初始化样式
+    │      
+    └─views
+            Home.vue		-- 主页(暂时没用)
+            NowPlaying.vue	-- 歌单页
+            Player.vue		-- 播放页
+            Playlist.vue	-- 歌曲列表页
+            

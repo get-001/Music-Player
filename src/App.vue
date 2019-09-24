@@ -8,9 +8,9 @@
   >
     <Background :image="player.cover_imgSrc" />
     <nav class="nav-page">
-      <router-link class="nav-btn" tag="span" :to="{name:'player'}">播放器</router-link>
-      <router-link class="nav-btn" tag="span" :to="{name:'nowPlaying'}">正在播放</router-link>
-      <router-link class="nav-btn" tag="span" :to="{name:'playlist'}">播放列表</router-link>
+      <router-link class="nav-btn" tag="span" :to="{name:'player'}" replace>播放器</router-link>
+      <router-link class="nav-btn" tag="span" :to="{name:'nowPlaying'}" replace>正在播放</router-link>
+      <router-link class="nav-btn" tag="span" :to="{name:'playlist'}" replace>播放列表</router-link>
       <span class="nav-btn" @click="isShow_search=true">歌曲搜索</span>
     </nav>
 
@@ -25,14 +25,22 @@
       :title="'Music-Player '+player.versions"
     >
       <div id="HelloWorldAlert">
-        <!-- <h5 style="padding-left:20px;">
-          源码地址：
-          <a
-            href="http://a-1.vip/demo/myPlayer/myDist.zip"
-          >http://a-1.vip/demo/myPlayer/myDist.zip</a>
-        </h5>-->
         <p class="center">Hello World ~</p>
         <p class="center">欢迎你来体验 Music-Player</p>
+        <h5 style="padding-left:20px;">
+          源码地址：
+          <a href="http://a-1.vip/demo/myPlayer/myDist.zip" target="_blank">点击下载</a>
+        </h5>
+        <h5 style="padding-left:20px;text-indent:2em;margin-bottom:20px;">
+          <span style="margin-right:30px;">
+            作者：Ordinary (
+            <a href="http://a-1.vip/wx.png" target="_blank">wx_1098</a>)
+          </span>
+          <span>
+            Github：
+            <a href="https://github.com/get-001" target="_blank">get-001</a>
+          </span>
+        </h5>
         <h5 style="padding-left:20px;">本次更新：</h5>
         <p>[优化] 优化pc端样式</p>
         <h5 style="padding-left:20px;">v1.1.4.20190826</h5>
@@ -79,11 +87,12 @@ export default {
     ...mapState(["player"])
   },
   mounted() {
-    let versions = localStorage["versions"];
-    if (this.player.versions !== versions) {
-      this.showHelloWorld = true;
-      localStorage["versions"] = this.player.versions;
-    }
+    // let versions = localStorage["versions"];
+    // if (this.player.versions !== versions) {
+    //   this.showHelloWorld = true;
+    //   localStorage["versions"] = this.player.versions;
+    // }
+    this.showHelloWorld = true;
 
     this.addSonglistAll();
     this.getData({
@@ -143,7 +152,7 @@ export default {
         index++;
         if (index > len - 1) index = 0;
       }
-      this.$router.push({
+      this.$router.replace({
         name: pageArr[index]
       });
     },

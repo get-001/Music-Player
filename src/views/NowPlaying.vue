@@ -88,7 +88,7 @@ export default {
       "empty",
       "getDataOnly",
       "addSonglistItem",
-      "dleSonglistItem",
+      "delSonglistItem",
       "init"
     ]),
     isActive(id) {
@@ -112,7 +112,7 @@ export default {
         const item = this.player.songlistAll[listType].list[index];
         const is = this.isActive(item.id);
         if (is) {
-          this.dleSonglistItem({ listType: "collect", id: item.id });
+          this.delSonglistItem({ listType: "collect", id: item.id });
         } else {
           this.addSonglistItem({ listType: "collect", item, up: true });
         }
