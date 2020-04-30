@@ -11,7 +11,7 @@
     "bootstrap": "^3.4.1",
     "core-js": "^2.6.5",
     "element-ui": "^2.4.5",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "popper.js": "^1.15.0",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
